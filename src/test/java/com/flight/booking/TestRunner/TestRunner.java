@@ -27,7 +27,9 @@ import io.cucumber.testng.TestNGCucumberRunner;
         "html:target/cucumber-report/cucumber.html"
     }		
 )
-public class TestRunner extends AbstractTestNGCucumberTests{
+
+public class TestRunner{
+
     private TestNGCucumberRunner testNGCucumberRunner;
     
     @BeforeClass(alwaysRun = true)

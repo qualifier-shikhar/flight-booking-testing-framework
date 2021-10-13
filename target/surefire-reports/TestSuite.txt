@@ -1,15 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 52.021 s <<< FAILURE! - in TestSuite
-com.flight.booking.TestRunner.TestRunner.feature["user is able to buy One Way Ticket", "Optional[Buy a ticket on Flight Booking Application and sign up]"](1)  Time elapsed: 4.714 s  <<< FAILURE!
-org.openqa.selenium.WebDriverException: 
-unknown error: cannot determine loading status
-from disconnected: received Inspector.detached event
-  (Session info: chrome=94.0.4606.71)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'QT-INNO-LT0914', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.71, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\SHIKHA~1.JOS\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55865}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 13e393cd2d664ee7a718bc9336144454
-
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 43.612 s - in TestSuite

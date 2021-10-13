@@ -18,7 +18,7 @@ import io.cucumber.java.en.When;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class FlightBookingStep {
-
+	
 	@Given("user accessed the flight booking application")
 	public void user_accessed_the_flight_booking_application() {
 		WebDriverManager.chromedriver().setup();
@@ -42,7 +42,7 @@ public class FlightBookingStep {
 	@And("user select departing flight and returning flight and its service class")
 	public void user_select_departing_flight_and_returning_flight_and_its_service_class() throws Throwable {
 		FlightDetails flightDetail = new FlightDetails();
-		flightDetail.flightClassSelection();  
+		flightDetail.flightClassSelection();
 	}
 
 	@And("user enter billing address")

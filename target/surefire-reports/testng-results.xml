@@ -1,31 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
+<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-10-13T15:40:21 IST" name="Suite" finished-at="2021-10-13T15:41:12 IST" duration-ms="51302">
+  <suite started-at="2021-10-13T16:26:41 IST" name="Suite" finished-at="2021-10-13T16:27:24 IST" duration-ms="42754">
     <groups>
-      <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.flight.booking.TestRunner.TestRunner@1184ab05]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-      </group> <!-- cucumber -->
     </groups>
-    <test started-at="2021-10-13T15:40:21 IST" name="Test" finished-at="2021-10-13T15:41:12 IST" duration-ms="51302">
+    <test started-at="2021-10-13T16:26:41 IST" name="Test" finished-at="2021-10-13T16:27:24 IST" duration-ms="42754">
       <class name="com.flight.booking.TestRunner.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.flight.booking.TestRunner.TestRunner@1184ab05]" started-at="2021-10-13T15:40:21 IST" name="setUpClass" finished-at="2021-10-13T15:40:21 IST" duration-ms="579" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@32091c14]]>
-              </value>
-            </param>
-          </params>
+        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.flight.booking.TestRunner.TestRunner@1f0f1111]" started-at="2021-10-13T16:26:41 IST" name="setUpClass" finished-at="2021-10-13T16:26:42 IST" duration-ms="660" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method is-config="true" signature="setUpClass()[pri:0, instance:com.flight.booking.TestRunner.TestRunner@1184ab05]" started-at="2021-10-13T15:40:21 IST" name="setUpClass" finished-at="2021-10-13T15:40:21 IST" duration-ms="29" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.flight.booking.TestRunner.TestRunner@1184ab05]" started-at="2021-10-13T15:40:21 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-10-13T15:41:07 IST" duration-ms="45886" status="PASS">
+        <test-method signature="feature(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.flight.booking.TestRunner.TestRunner@1f0f1111]" started-at="2021-10-13T16:26:42 IST" name="feature" data-provider="features" finished-at="2021-10-13T16:27:23 IST" duration-ms="41694" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -38,63 +24,10 @@
               </value>
             </param>
           </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- runScenario -->
-        <test-method signature="feature(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.flight.booking.TestRunner.TestRunner@1184ab05]" started-at="2021-10-13T15:41:07 IST" name="feature" data-provider="features" finished-at="2021-10-13T15:41:12 IST" duration-ms="4494" status="FAIL">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["user is able to buy One Way Ticket"]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA["Optional[Buy a ticket on Flight Booking Application and sign up]"]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.WebDriverException">
-            <message>
-              <![CDATA[unknown error: cannot determine loading status
-from disconnected: received Inspector.detached event
-  (Session info: chrome=94.0.4606.71)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'QT-INNO-LT0914', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.71, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\SHIKHA~1.JOS\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55865}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 13e393cd2d664ee7a718bc9336144454]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.WebDriverException: unknown error: cannot determine loading status
-from disconnected: received Inspector.detached event
-  (Session info: chrome=94.0.4606.71)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'QT-INNO-LT0914', ip: '192.168.1.5', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.71, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\SHIKHA~1.JOS\AppDa...}, goog:chromeOptions: {debuggerAddress: localhost:55865}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 13e393cd2d664ee7a718bc9336144454
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)
-at com.flight.booking.StepDef.FlightBookingStep.user_accessed_the_flight_booking_application(FlightBookingStep.java:26)
-at ✽.user accessed the flight booking application(file:///C:/Users/shikhar.joshi/Desktop/test/FlightBooking/src/test/resources/features/FlightBooking.feature:4)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.WebDriverException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- feature -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.flight.booking.TestRunner.TestRunner@1184ab05]" started-at="2021-10-13T15:41:12 IST" name="tearDownClass" finished-at="2021-10-13T15:41:12 IST" duration-ms="255" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.flight.booking.TestRunner.TestRunner@1f0f1111]" started-at="2021-10-13T16:27:23 IST" name="tearDownClass" finished-at="2021-10-13T16:27:24 IST" duration-ms="341" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
