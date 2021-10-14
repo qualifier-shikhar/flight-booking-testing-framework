@@ -6,6 +6,7 @@
 package com.flight.booking.StepDef;
 
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
 
 import com.flight.booking.Utilities.DriverContext;
 import com.flight.booking.pages.FlightDetails;
@@ -49,13 +50,12 @@ public class FlightBookingStep {
 	public void user_enter_billing_address() throws Throwable {
 		FlightDetails flightDetail = new FlightDetails();
 		flightDetail.billingAddress("10 Dowing Street", "Test Pur", "Dakota", "23546798");
-		flightDetail.printPrice();
 	}
 
 	@Then("user should get confirmation page and final price")
 	public void user_should_get_confirmation_page_and_final_price() throws Throwable {
 		FlightDetails flightDetail = new FlightDetails();
-		flightDetail.printPrice();
+		Assert.assertEquals(flightDetail.checkPrice(), "$1753 USD");
 	}
 
 	@Then("close the browser")

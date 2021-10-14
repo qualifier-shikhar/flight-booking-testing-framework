@@ -16,6 +16,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.flight.booking.Utilities.Base;
 import com.flight.booking.Utilities.DriverContext;
+import com.flight.booking.Utilities.WebDriverWaitContext;
 
 public class FlightDetails extends Base{
 	 	@FindBy(xpath = "//*[@id='cid_37']/table/tbody/tr[1]/td/h1")
@@ -87,44 +88,40 @@ public class FlightDetails extends Base{
 	    @FindBy(xpath = "//font[contains(text(), 'USD')]")
 	    private List<WebElement> prices;
 
-	    WebDriverWait wait = new WebDriverWait(DriverContext.driver,10);
+	    // WebDriverWait wait = new WebDriverWait(DriverContext.driver,10);
 
+		public void selectByValueElement(WebElement element, String value) {
+			Select selectValue = new Select(element);
+			selectValue.selectByValue(value);
+		}
+
+		public void selectByVisibleTextElement(WebElement element, String value) {
+			Select selectValue = new Select(element);
+			selectValue.selectByVisibleText(value);
+		}
+		
 	    public void flightDetailsForm(String passengerCount, String departFrom, String departOnMonth, String departOnDay, String arriveInPlace, String arriveInMonth, String arriveInDay, String airPreference) 
 	    {
-	        wait.until(ExpectedConditions.visibilityOf(oneWay));
+	        WebDriverWaitContext.wait.until(ExpectedConditions.visibilityOf(oneWay));
 	        oneWay.click();
 	        
-	        Select selectPassenger = new Select(numOfPassengers);
-	        selectPassenger.selectByValue(passengerCount);
-
-	        Select selectDepartingPlace = new Select(departingPlace);
-	        selectDepartingPlace.selectByValue(departFrom);
-
-	        Select selectDepartingMonth = new Select(departingMonth);
-	        selectDepartingMonth.selectByVisibleText(departOnMonth);
-
-	        Select selectDepartingDay = new Select(departingDay);
-	        selectDepartingDay.selectByValue(departOnDay);
-
-	        Select selectArrivingPlace = new Select(arrivingPlace);
-	        selectArrivingPlace.selectByValue(arriveInPlace);
-	        
-	        Select selectArrivingMonth = new Select(arrivingMonth);
-	        selectArrivingMonth.selectByVisibleText(arriveInMonth);
-
-	        Select selectArrivingDay = new Select(arrivingDay);
-	        selectArrivingDay.selectByVisibleText(arriveInDay);
+	        selectByValueElement(numOfPassengers, passengerCount);
+	        selectByVisibleTextElement(departingPlace, departFrom);
+	        selectByVisibleTextElement(departingMonth, departOnMonth);
+	        selectByValueElement(departingDay, departOnDay);
+	        selectByValueElement(arrivingPlace, arriveInPlace);
+	        selectByVisibleTextElement(arrivingMonth, arriveInMonth);
+	        selectByVisibleTextElement(arrivingDay, arriveInDay);
 
 	        businessClass.click();
 
-	        Select selectAirlinePreference = new Select(airlinePreference);
-	        selectAirlinePreference.selectByVisibleText(airPreference);
+	        selectByVisibleTextElement(airlinePreference, airPreference);
 
 	        submitBtn.click();
 	    }
 	    
 	    public void flightClassSelection() {
-	        wait.until(ExpectedConditions.visibilityOf(departReturnTable));
+	        WebDriverWaitContext.wait.until(ExpectedConditions.visibilityOf(departReturnTable));
 	        for(WebElement radioBtn : flightDepartureFirstClass){
 	            radioBtn.click();
 	        }
@@ -132,7 +129,7 @@ public class FlightDetails extends Base{
 	    }
 
 	    public void billingAddress(String street, String city, String state, String postalCode) {
-	        wait.until(ExpectedConditions.visibilityOf(billingAddressCheck));
+	        WebDriverWaitContext.wait.until(ExpectedConditions.visibilityOf(billingAddressCheck));
 	        streetAddress.sendKeys(street);
 	        cityAddress.sendKeys(city);
 	        stateNameAddress.sendKeys(state);
@@ -140,8 +137,8 @@ public class FlightDetails extends Base{
 	        billingAddressSubmitBtn.click();
 	    }
 
-	    public void printPrice() {
-	        wait.until(ExpectedConditions.visibilityOf(confirmationTable));
-	        System.out.println(prices.get(1).getText());
+	    public String checkPrice() {
+	        WebDriverWaitContext.wait.until(ExpectedConditions.visibilityOf(confirmationTable));
+	        return prices.get(1).getText();
 	    }
 }
