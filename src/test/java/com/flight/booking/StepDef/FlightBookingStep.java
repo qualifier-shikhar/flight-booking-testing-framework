@@ -3,12 +3,12 @@
  * @date: 10/11/2021
  */
 
-package com.flight.booking.StepDef;
+package com.flight.booking.stepdef;
 
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 
-import com.flight.booking.Utilities.DriverContext;
+import com.flight.booking.utilities.DriverContext;
 import com.flight.booking.pages.FlightDetails;
 import com.flight.booking.pages.RegistrationPage;
 
