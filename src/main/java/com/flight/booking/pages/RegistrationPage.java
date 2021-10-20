@@ -42,17 +42,17 @@ public class RegistrationPage extends Base{
     @FindBy(id="flight-link")
     private WebElement flights;
 
-    public void register(String firstname, String lastname, String phone, String username, String email, String password, String passwordConfirm) {
+    public void register(String firstName, String lastName, String phoneNumber, String userName, String e_mail, String pass_word, String password_Confirm) {
         Base.waitForElement(selectCountry);
         Select select = new Select(selectCountry);
-        this.firstname.sendKeys(firstname);
-        this.lastname.sendKeys(lastname);
-        this.phone.sendKeys(phone);
-        this.username.sendKeys(username);
+        firstname.sendKeys(firstName);
+        lastname.sendKeys(lastName);
+        phone.sendKeys(phoneNumber);
+        username.sendKeys(userName);
         select.selectByValue("INDIA");
-        this.email.sendKeys(email);
-        this.password.sendKeys(password);
-        this.passwordConfirm.sendKeys(passwordConfirm);
+        email.sendKeys(e_mail);
+        password.sendKeys(pass_word);
+        passwordConfirm.sendKeys(password_Confirm);
         submit.click();
     }
 
