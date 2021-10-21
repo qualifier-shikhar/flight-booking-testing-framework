@@ -5,7 +5,7 @@
 
 package com.flight.booking.pages;
 
-import com.flight.booking.utilities.Base;
+import com.flight.booking.base.Base;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -57,6 +57,7 @@ public class RegistrationPage extends Base{
     }
 
     public void registrationConfirm() {
+
         Base.waitForElement(flights);
         flights.click();
     }

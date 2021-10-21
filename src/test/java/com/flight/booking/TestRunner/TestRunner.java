@@ -5,6 +5,8 @@
 
 package com.flight.booking.testrunner;
 
+import com.flight.booking.base.DriverContext;
+
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
@@ -33,16 +35,21 @@ public class TestRunner{
     
     @BeforeClass(alwaysRun = true)
     public void setUpClass(){
+
     	testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
+        //driver code
+        DriverInitializer.goToWebPage("chrome");
     }
 
     @Test(dataProvider = "features")
     public void feature(PickleWrapper pickle, FeatureWrapper cucumberFeature) {
+
         testNGCucumberRunner.runScenario(pickle.getPickle());
     }
     
     @DataProvider()
     public Object[][] features() {
+
     	if(testNGCucumberRunner == null) {
     		testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
     	}
@@ -51,8 +58,9 @@ public class TestRunner{
     
     @AfterClass(alwaysRun = true)
     public void tearDownClass(){
-        System.out.println("Inside tearDown");
+
     	testNGCucumberRunner.finish();
+        DriverContext.driver.quit();
     }
 
 }

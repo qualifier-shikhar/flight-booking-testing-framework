@@ -1,4 +1,4 @@
-package com.flight.booking.utilities;
+package com.flight.booking.base;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;

@@ -1,7 +1,8 @@
 package com.flight.booking.pages;
 
 import java.util.List;
-import com.flight.booking.utilities.Base;
+
+import com.flight.booking.base.Base;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

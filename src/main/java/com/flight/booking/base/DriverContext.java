@@ -3,7 +3,7 @@
  * @date: 10/11/2021
  */
 
-package com.flight.booking.utilities;
+package com.flight.booking.base;
 
 import org.openqa.selenium.WebDriver;
 
