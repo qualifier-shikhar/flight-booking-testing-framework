@@ -42,6 +42,9 @@ public class RegistrationPage extends Base{
     @FindBy(id="flight-link")
     private WebElement flights;
 
+    @FindBy(xpath = "/html/body/form/div[1]/ul/li[5]/div/table/tbody/tr[1]/td/h1")
+    private WebElement registrationConfirmationHeading;
+
     public void register(String firstName, String lastName, String phoneNumber, String userName, String e_mail, String pass_word, String password_Confirm) {
         Base.waitForElement(selectCountry);
         Select select = new Select(selectCountry);
@@ -56,8 +59,12 @@ public class RegistrationPage extends Base{
         submit.click();
     }
 
-    public void registrationConfirm() {
+    public String registrationConfirm() {
+        Base.waitForElement(flights);
+        return registrationConfirmationHeading.getText();
+    }
 
+    public void selectFlights() {
         Base.waitForElement(flights);
         flights.click();
     }

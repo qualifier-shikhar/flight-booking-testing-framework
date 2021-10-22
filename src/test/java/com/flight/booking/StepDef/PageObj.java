@@ -5,6 +5,6 @@ import com.flight.booking.pages.RegistrationPage;
 
 public class PageObj {
     
-    public static RegistrationPage register = new RegistrationPage();
-    public static FlightDetails flightDetails = new FlightDetails();
+    RegistrationPage register = new RegistrationPage();
+    FlightDetails flightDetails = new FlightDetails();
 }
