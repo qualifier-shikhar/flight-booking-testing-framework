@@ -1,6 +1,5 @@
-package com.flight.booking.testrunner;
+package com.flight.booking.base;
 
-import com.flight.booking.base.DriverContext;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 

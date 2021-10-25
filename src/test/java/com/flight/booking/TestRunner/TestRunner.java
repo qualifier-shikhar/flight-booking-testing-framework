@@ -6,6 +6,7 @@
 package com.flight.booking.testrunner;
 
 import com.flight.booking.base.DriverContext;
+import com.flight.booking.base.DriverInitializer;
 
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
@@ -18,7 +19,7 @@ import io.cucumber.testng.PickleWrapper;
 import io.cucumber.testng.TestNGCucumberRunner;
 
 @CucumberOptions(
-	features = "resources/features", //the path of the feature files
+	features = "src/resources/features", //the path of the feature files
     glue={"com/flight/booking/stepdef"}, //the path of the step definition files
     tags = "@Booking",
     plugin = {
