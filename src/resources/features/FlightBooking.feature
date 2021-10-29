@@ -1,5 +1,5 @@
+@Booking
 Feature: Buy a ticket on Flight Booking Application and sign up
-  @Booking
   Scenario: user is able to buy One Way Ticket
   Given user is on flight booking webpage and filled sign up form
   When user wants to buy a one way ticket and filled other details

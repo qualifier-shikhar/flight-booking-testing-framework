@@ -5,7 +5,7 @@
 
 package com.flight.booking.testrunner;
 
-import com.flight.booking.base.DriverContext;
+import com.flight.booking.base.Base;
 import com.flight.booking.base.DriverInitializer;
 
 import org.testng.annotations.AfterClass;
@@ -21,7 +21,6 @@ import io.cucumber.testng.TestNGCucumberRunner;
 @CucumberOptions(
 	features = "src/resources/features", //the path of the feature files
     glue={"com/flight/booking/stepdef"}, //the path of the step definition files
-    tags = "@Booking",
     plugin = {
         "summary",
         "pretty",
@@ -36,7 +35,6 @@ public class TestRunner{
     
     @BeforeClass(alwaysRun = true)
     public void setUpClass(){
-
     	testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
         //driver code
         DriverInitializer.goToWebPage("chrome");
@@ -44,7 +42,6 @@ public class TestRunner{
 
     @Test(dataProvider = "features")
     public void feature(PickleWrapper pickle, FeatureWrapper cucumberFeature) {
-
         testNGCucumberRunner.runScenario(pickle.getPickle());
     }
     
@@ -54,14 +51,14 @@ public class TestRunner{
     	if(testNGCucumberRunner == null) {
     		testNGCucumberRunner = new TestNGCucumberRunner(this.getClass());
     	}
+
     	return testNGCucumberRunner.provideScenarios();
     }
     
     @AfterClass(alwaysRun = true)
     public void tearDownClass(){
-
+        Base.driver.quit();
     	testNGCucumberRunner.finish();
-        DriverContext.driver.quit();
     }
 
 }

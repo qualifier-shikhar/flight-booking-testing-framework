@@ -1,1 +1,5 @@
 target/
+src/resources/features/Test.feature
+src/resources/features/TestOne.feature
+src/test/java/com/flight/booking/stepdef/TestOneStep.java
+src/test/java/com/flight/booking/stepdef/TestStep.java
