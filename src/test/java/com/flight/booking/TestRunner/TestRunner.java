@@ -21,11 +21,10 @@ import io.cucumber.testng.TestNGCucumberRunner;
 @CucumberOptions(
 	features = "src/resources/features", //the path of the feature files
     glue={"com/flight/booking/stepdef"}, //the path of the step definition files
+    tags="@Booking",
     plugin = {
-        "summary",
         "pretty",
         "json:target/cucumber-reports/CucumberTestReport.json",
-        "html:target/cucumber-report/cucumber.html"
     }		
 )
 
