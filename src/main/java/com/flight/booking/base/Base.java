@@ -13,6 +13,7 @@ public class Base {
         PageFactory.initElements(driver, this);
     }
     
+    // implicit
     public static void waitForElement(WebElement element) {
         WebDriverWait wait = new WebDriverWait(driver,10);
         wait.until(ExpectedConditions.visibilityOf(element));
