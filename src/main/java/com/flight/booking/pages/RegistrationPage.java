@@ -5,13 +5,17 @@
 
 package com.flight.booking.pages;
 
-import com.flight.booking.base.Base;
+import com.flight.booking.base.BasePage;
+import com.flight.booking.base.DriverContext;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class RegistrationPage extends Base{
+public class RegistrationPage extends BasePage{
+
     @FindBy(name="firstName")
     private WebElement firstname;
     
@@ -45,8 +49,15 @@ public class RegistrationPage extends Base{
     @FindBy(xpath = "/html/body/form/div[1]/ul/li[5]/div/table/tbody/tr[1]/td/h1")
     private WebElement registrationConfirmationHeading;
 
+    public boolean isRegister() {
+        return firstname.isDisplayed();
+    }
+
     public void register(String firstName, String lastName, String phoneNumber, String userName, String e_mail, String pass_word, String password_Confirm) {
-        Base.waitForElement(selectCountry);
+        
+        WebDriverWait wait = new WebDriverWait(DriverContext.Driver,10);
+        wait.until(ExpectedConditions.visibilityOf(selectCountry));
+        
         Select select = new Select(selectCountry);
         firstname.sendKeys(firstName);
         lastname.sendKeys(lastName);
@@ -60,12 +71,16 @@ public class RegistrationPage extends Base{
     }
 
     public String registrationConfirm() {
-        Base.waitForElement(flights);
-        return registrationConfirmationHeading.getText();
+
+        WebDriverWait wait = new WebDriverWait(DriverContext.Driver,10);
+        wait.until(ExpectedConditions.visibilityOf(flights));
+		return registrationConfirmationHeading.getText();
     }
 
-    public void selectFlights() {
-        Base.waitForElement(flights);
+    public void lnkFlights() {
+
+        WebDriverWait wait = new WebDriverWait(DriverContext.Driver,10);
+        wait.until(ExpectedConditions.visibilityOf(flights));
         flights.click();
     }
 }

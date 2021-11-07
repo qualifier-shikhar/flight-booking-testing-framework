@@ -1,15 +1,17 @@
 package com.flight.booking.pages;
 
-import java.util.List;
 
-import com.flight.booking.base.Base;
+import com.flight.booking.base.BasePage;
+import com.flight.booking.base.DriverContext;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class FlightDetails extends Base{
+public class FlightDetailsPage extends BasePage{
     @FindBy(xpath = "//*[@id='cid_37']/table/tbody/tr[1]/td/h1")
 	private WebElement flights;
 
@@ -46,38 +48,10 @@ public class FlightDetails extends Base{
 	@FindBy(id="findFlights")
 	private WebElement submitBtn;
 
-	@FindBy(id="select-flight")
-	private WebElement departReturnTable;
+	public boolean isFlightDetails() {
 
-	@FindBy(id="input_50_1_1")
-	private List<WebElement> flightDepartureFirstClass;
-
-	@FindBy(id="reserveFlights")
-	private WebElement departReturnSubmitBtn;
-
-	@FindBy(id="book-flight")
-	private WebElement billingAddressCheck;
-	
-	@FindBy(id="input_53_addr_line1")
-	private WebElement streetAddress;
-
-	@FindBy(id="input_53_city")
-	private WebElement cityAddress;
-	
-	@FindBy(id="input_53_state")
-	private WebElement stateNameAddress;
-	
-	@FindBy(id="input_53_postal")
-	private WebElement postalCodeAddress;
-
-	@FindBy(id="buyFlights")
-	private WebElement billingAddressSubmitBtn;
-
-	@FindBy(id="confirm-table")
-	private WebElement confirmationTable;
-
-	@FindBy(xpath = "//font[contains(text(), 'USD')]")
-	private List<WebElement> prices;
+		return oneWay.isDisplayed();
+	}
 
 	public void selectByValueElement(WebElement element, String value) {
 		Select selectValue = new Select(element);
@@ -91,7 +65,9 @@ public class FlightDetails extends Base{
 	
 	public void flightDetailsForm(String passengerCount, String departFrom, String departOnMonth, String departOnDay, String arriveInPlace, String arriveInMonth, String arriveInDay, String airPreference) 
 	{
-		Base.waitForElement(oneWay);
+		WebDriverWait wait = new WebDriverWait(DriverContext.Driver,10);
+        wait.until(ExpectedConditions.visibilityOf(oneWay));
+		
 		oneWay.click();
 		
 		selectByValueElement(numOfPassengers, passengerCount);
@@ -106,28 +82,10 @@ public class FlightDetails extends Base{
 
 		selectByVisibleTextElement(airlinePreference, airPreference);
 
-		submitBtn.click();
 	}
 	
-	public void flightClassSelection() {
-		Base.waitForElement(departReturnTable);
-		for(WebElement radioBtn : flightDepartureFirstClass){
-			radioBtn.click();
-		}
-		departReturnSubmitBtn.click();
-	}
-
-	public void billingAddress(String street, String city, String state, String postalCode) {
-		Base.waitForElement(billingAddressCheck);
-		streetAddress.sendKeys(street);
-		cityAddress.sendKeys(city);
-		stateNameAddress.sendKeys(state);
-		postalCodeAddress.sendKeys(postalCode);
-		billingAddressSubmitBtn.click();
-	}
-
-	public String checkPrice() {
-		Base.waitForElement(confirmationTable);
-		return prices.get(1).getText();
+	public void flightSubmitBtn() {
+		
+		submitBtn.click();
 	}
 }
