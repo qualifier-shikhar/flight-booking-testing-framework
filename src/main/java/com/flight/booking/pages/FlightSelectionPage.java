@@ -7,8 +7,6 @@ import com.flight.booking.base.DriverContext;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class FlightSelectionPage extends BasePage{
     
@@ -23,8 +21,7 @@ public class FlightSelectionPage extends BasePage{
 
     public void flightClassSelection() {
 		
-		WebDriverWait wait = new WebDriverWait(DriverContext.Driver,10);
-        wait.until(ExpectedConditions.visibilityOf(departReturnTable));
+		DriverContext.ExplicitWaitForWebElement(departReturnTable);
 
 		for(WebElement radioBtn : flightDepartureFirstClass){
 			radioBtn.click();

@@ -10,9 +10,7 @@ import com.flight.booking.base.DriverContext;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class RegistrationPage extends BasePage{
 
@@ -50,13 +48,12 @@ public class RegistrationPage extends BasePage{
     private WebElement registrationConfirmationHeading;
 
     public boolean isRegister() {
+
+        DriverContext.ExplicitWaitForWebElement(firstname);
         return firstname.isDisplayed();
     }
 
     public void register(String firstName, String lastName, String phoneNumber, String userName, String e_mail, String pass_word, String password_Confirm) {
-        
-        WebDriverWait wait = new WebDriverWait(DriverContext.Driver,10);
-        wait.until(ExpectedConditions.visibilityOf(selectCountry));
         
         Select select = new Select(selectCountry);
         firstname.sendKeys(firstName);
@@ -72,15 +69,13 @@ public class RegistrationPage extends BasePage{
 
     public String registrationConfirm() {
 
-        WebDriverWait wait = new WebDriverWait(DriverContext.Driver,10);
-        wait.until(ExpectedConditions.visibilityOf(flights));
+        DriverContext.ExplicitWaitForWebElement(flights);
 		return registrationConfirmationHeading.getText();
     }
 
     public void lnkFlights() {
 
-        WebDriverWait wait = new WebDriverWait(DriverContext.Driver,10);
-        wait.until(ExpectedConditions.visibilityOf(flights));
+        DriverContext.ExplicitWaitForWebElement(flights);
         flights.click();
     }
 }

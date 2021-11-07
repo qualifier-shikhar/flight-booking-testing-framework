@@ -7,9 +7,7 @@ import com.flight.booking.base.DriverContext;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
-import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class FlightDetailsPage extends BasePage{
     @FindBy(xpath = "//*[@id='cid_37']/table/tbody/tr[1]/td/h1")
@@ -50,23 +48,25 @@ public class FlightDetailsPage extends BasePage{
 
 	public boolean isFlightDetails() {
 
+		DriverContext.ExplicitWaitForWebElement(oneWay);
 		return oneWay.isDisplayed();
 	}
 
 	public void selectByValueElement(WebElement element, String value) {
+
 		Select selectValue = new Select(element);
 		selectValue.selectByValue(value);
 	}
 
 	public void selectByVisibleTextElement(WebElement element, String value) {
+
 		Select selectValue = new Select(element);
 		selectValue.selectByVisibleText(value);
 	}
 	
 	public void flightDetailsForm(String passengerCount, String departFrom, String departOnMonth, String departOnDay, String arriveInPlace, String arriveInMonth, String arriveInDay, String airPreference) 
 	{
-		WebDriverWait wait = new WebDriverWait(DriverContext.Driver,10);
-        wait.until(ExpectedConditions.visibilityOf(oneWay));
+		DriverContext.ExplicitWaitForWebElement(oneWay);
 		
 		oneWay.click();
 		

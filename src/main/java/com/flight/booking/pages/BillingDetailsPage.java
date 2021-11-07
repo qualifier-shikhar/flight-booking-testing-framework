@@ -5,8 +5,6 @@ import com.flight.booking.base.DriverContext;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class BillingDetailsPage extends BasePage{
     
@@ -30,8 +28,7 @@ public class BillingDetailsPage extends BasePage{
 
     public void billingAddress(String street, String city, String state, String postalCode) {
 		
-		WebDriverWait wait = new WebDriverWait(DriverContext.Driver,10);
-        wait.until(ExpectedConditions.visibilityOf(billingAddressCheck));
+		DriverContext.ExplicitWaitForWebElement(billingAddressCheck);
 		streetAddress.sendKeys(street);
 		cityAddress.sendKeys(city);
 		stateNameAddress.sendKeys(state);

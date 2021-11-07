@@ -20,6 +20,7 @@ public class PriceConfirmationPage extends BasePage{
 
 	public boolean isPrice() {
 
+		DriverContext.ExplicitWaitForWebElement(confirmationTable);
 		return confirmationTable.isDisplayed();
 	}
     public String checkPrice() {
