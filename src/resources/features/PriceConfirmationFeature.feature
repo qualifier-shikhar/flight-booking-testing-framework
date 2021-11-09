@@ -1,6 +1,6 @@
-Feature: Billing Details Feature
+Feature: Price Confirmation Feature
 
-    Scenario: user filled flight details in flight details page
+    Scenario: user get ticket price
     Given   user is on the registration webpage
     When    user filled up registration details and hit submit
     Then    user gets registration confirmation page

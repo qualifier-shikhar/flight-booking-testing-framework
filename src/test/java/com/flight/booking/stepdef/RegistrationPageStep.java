@@ -13,8 +13,7 @@ public class RegistrationPageStep {
     @Given("^user is on the registration webpage$")
     public void user_is_on_the_registration_webpage() throws Throwable {
         
-        // Thread.sleep(3000);
-        Assert.assertTrue(Settings.registrationPage.isRegister(), "The Registration page not Loaded");
+        Assert.assertTrue(Settings.registrationPage.isRegister());
     }
 
     @When("^user filled up registration details and hit submit$")

@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class FrameworkInitialize {
     
     public void InitializeBrowser(String browser) {
@@ -12,11 +14,12 @@ public class FrameworkInitialize {
         WebDriver driver = null;
         switch(browser) {
             case "chrome":
-                System.setProperty("webdriver.chrome.driver", "C:/Users/shikhar.joshi/Software/chromedriver.exe");
+                WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
                 break;
             case "edge":
 
+                WebDriverManager.edgedriver().setup();
                 driver = new EdgeDriver();
                 break;
         }

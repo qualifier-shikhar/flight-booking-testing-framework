@@ -1,4 +1,4 @@
-Feature: RegistrationFeature
+Feature: Registration Feature
 
     Scenario: Fill user details in registration page
     Given   user is on the registration webpage

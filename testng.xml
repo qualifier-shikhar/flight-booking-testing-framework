@@ -3,7 +3,11 @@
 <suite name="Suite">
   <test name="BookVerification1">
     <classes>
-      <class name="com.flight.booking.testrunner.TestRunner" />
+      <class name="com.flight.booking.testrunner.BillingDetailsTestRunner" />
+      <class name="com.flight.booking.testrunner.FlightDetailsTestRunner" />
+      <class name="com.flight.booking.testrunner.FlightSelectionTestRunner" />
+      <class name="com.flight.booking.testrunner.PriceConfirmationTestRunner" />
+      <class name="com.flight.booking.testrunner.RegistrationTestRunner" />
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
