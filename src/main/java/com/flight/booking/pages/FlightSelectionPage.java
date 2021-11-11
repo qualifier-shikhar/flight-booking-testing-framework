@@ -3,8 +3,6 @@ package com.flight.booking.pages;
 import java.util.List;
 
 import com.flight.booking.base.BasePage;
-import com.flight.booking.base.DriverContext;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -21,7 +19,7 @@ public class FlightSelectionPage extends BasePage{
 
     public void flightClassSelection() {
 		
-		DriverContext.ExplicitWaitForWebElement(departReturnTable);
+		ExplicitWaitForWebElement(departReturnTable);
 
 		for(WebElement radioBtn : flightDepartureFirstClass){
 			radioBtn.click();

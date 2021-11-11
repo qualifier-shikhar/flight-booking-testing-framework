@@ -2,14 +2,13 @@ package com.flight.booking.pages;
 
 
 import com.flight.booking.base.BasePage;
-import com.flight.booking.base.DriverContext;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.ui.Select;
 
 public class FlightDetailsPage extends BasePage{
+	
     @FindBy(xpath = "//*[@id='cid_37']/table/tbody/tr[1]/td/h1")
 	private WebElement flights;
 
@@ -48,7 +47,7 @@ public class FlightDetailsPage extends BasePage{
 
 	public boolean isFlightDetails() {
 
-		DriverContext.ExplicitWaitForWebElement(oneWay);
+		ExplicitWaitForWebElement(oneWay);
 		return oneWay.isDisplayed();
 	}
 
@@ -66,7 +65,6 @@ public class FlightDetailsPage extends BasePage{
 	
 	public void flightDetailsForm(String passengerCount, String departFrom, String departOnMonth, String departOnDay, String arriveInPlace, String arriveInMonth, String arriveInDay, String airPreference) 
 	{
-		DriverContext.ExplicitWaitForWebElement(oneWay);
 		
 		oneWay.click();
 		

@@ -6,8 +6,6 @@
 package com.flight.booking.pages;
 
 import com.flight.booking.base.BasePage;
-import com.flight.booking.base.DriverContext;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.Select;
@@ -49,7 +47,7 @@ public class RegistrationPage extends BasePage{
 
     public boolean isRegister() {
 
-        DriverContext.ExplicitWaitForWebElement(firstname);
+        ExplicitWaitForWebElement(firstname);
         return firstname.isDisplayed();
     }
 
@@ -69,13 +67,13 @@ public class RegistrationPage extends BasePage{
 
     public String registrationConfirm() {
 
-        DriverContext.ExplicitWaitForWebElement(flights);
+        ExplicitWaitForWebElement(flights);
 		return registrationConfirmationHeading.getText();
     }
 
     public void lnkFlights() {
 
-        DriverContext.ExplicitWaitForWebElement(flights);
+        ExplicitWaitForWebElement(flights);
         flights.click();
     }
 }

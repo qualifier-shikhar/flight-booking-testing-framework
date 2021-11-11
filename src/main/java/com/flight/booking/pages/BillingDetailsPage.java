@@ -1,8 +1,6 @@
 package com.flight.booking.pages;
 
 import com.flight.booking.base.BasePage;
-import com.flight.booking.base.DriverContext;
-
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -28,7 +26,7 @@ public class BillingDetailsPage extends BasePage{
 
     public void billingAddress(String street, String city, String state, String postalCode) {
 		
-		DriverContext.ExplicitWaitForWebElement(billingAddressCheck);
+		ExplicitWaitForWebElement(billingAddressCheck);
 		streetAddress.sendKeys(street);
 		cityAddress.sendKeys(city);
 		stateNameAddress.sendKeys(state);
