@@ -10,6 +10,8 @@ public class FlightSelectionStep extends Base{
     @Then("^user selects departure and return flight$")
     public void user_selects_departure_and_return_flight() throws Throwable {
         
+        LOGGER.info("User is on Flight Class Selection Page");
+        LOGGER.info("User is selecting Flight Class");
         CurrentPage = GetInstance(FlightSelectionPage.class);
         CurrentPage.As(FlightSelectionPage.class).flightClassSelection();
     }
@@ -18,5 +20,6 @@ public class FlightSelectionStep extends Base{
     public void user_select_continue_button() throws Throwable {
 
         CurrentPage.As(FlightSelectionPage.class).flightSelectionContinueBtn();
+        LOGGER.info("User clicks continue button");
     }
 }

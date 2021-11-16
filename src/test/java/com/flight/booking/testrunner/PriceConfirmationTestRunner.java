@@ -7,10 +7,8 @@ import io.cucumber.testng.CucumberOptions;
     features = "src/resources/features/PriceConfirmationFeature.feature",
     glue = "com/flight/booking/stepdef",
     plugin = {
-        "pretty",
-        "json:target/cucumber-reports/CucumberTestReport.json",
-    },
-    monochrome = true
+        "json:target/cucumber-reports/jsonReports/PriceConfirmationTestReport.json",
+    }
 )
 public class PriceConfirmationTestRunner extends AbstractTestNGCucumberTests{
 

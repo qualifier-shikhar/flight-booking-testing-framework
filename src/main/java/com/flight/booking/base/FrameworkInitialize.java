@@ -6,15 +6,15 @@ import org.openqa.selenium.edge.EdgeDriver;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class FrameworkInitialize{
+public class FrameworkInitialize extends Base{
     
+    WebDriver driver = null;
     public void InitializeBrowser(String browser) {
         
         browser = browser.toLowerCase();
-        WebDriver driver = null;
         switch(browser) {
             case "chrome":
-                System.setProperty("webdriver.chrome.driver", "C:/Users/shikhar.joshi/Software/chromedriver.exe");
+                WebDriverManager.chromedriver().setup();
                 driver = new ChromeDriver();
                 break;
             case "edge":
@@ -25,7 +25,15 @@ public class FrameworkInitialize{
         }
         // Set the driver
         DriverContext.setDriver(driver);
-        // Browser
-        DriverContext.Browser = new Browser(driver);
+    }
+
+    public void GoToUrl() {
+
+        driver.get("https://vins-udemy.s3.amazonaws.com/docker/docker-book-flight.html");
+    }
+
+    public void quitDriver() {
+
+        driver.close();
     }
 }

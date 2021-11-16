@@ -12,6 +12,7 @@ public class PriceConfirmationStep extends Base{
     @Then("^user goes to ticket price page$")
     public void user_goes_to_ticket_price_page() {
 
+        LOGGER.info("User is on Price Confirmation Page");
         CurrentPage = GetInstance(PriceConfirmationPage.class);
         Assert.assertTrue(CurrentPage.As(PriceConfirmationPage.class).isPrice(), "Ticket Price page is not loaded");
     }
@@ -19,6 +20,6 @@ public class PriceConfirmationStep extends Base{
     @Then("^user get ticket price$")
     public void user_get_ticket_price() {
         
-        System.out.println(CurrentPage.As(PriceConfirmationPage.class).checkPrice());
+        LOGGER.info("User's ticket price is: " + CurrentPage.As(PriceConfirmationPage.class).checkPrice());
     }
 }

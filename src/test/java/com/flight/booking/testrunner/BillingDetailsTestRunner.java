@@ -7,10 +7,8 @@ import io.cucumber.testng.CucumberOptions;
     features = "src/resources/features/BillingDetailsFeature.feature",
     glue = "com/flight/booking/stepdef",
     plugin = {
-        "pretty",
-        "json:target/cucumber-reports/CucumberTestReport.json",
-    },
-    monochrome = true
+        "json:target/cucumber-reports/jsonReports/BillingDetailsTestReport.json",
+    }
 )
 public class BillingDetailsTestRunner extends AbstractTestNGCucumberTests{
 

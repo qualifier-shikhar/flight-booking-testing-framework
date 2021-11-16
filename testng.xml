@@ -4,10 +4,29 @@
   <test name="BookVerification1">
     <classes>
       <class name="com.flight.booking.testrunner.BillingDetailsTestRunner" />
-      <class name="com.flight.booking.testrunner.FlightDetailsTestRunner" />
-      <class name="com.flight.booking.testrunner.FlightSelectionTestRunner" />
-      <class name="com.flight.booking.testrunner.PriceConfirmationTestRunner" />
-      <class name="com.flight.booking.testrunner.RegistrationTestRunner" />
     </classes>
-  </test> <!-- Test -->
+    <!-- <packages>
+      <package name="com.flight.booking.testrunner" />
+    </packages> -->
+  </test>
+  <test name="BookVerification2">
+    <classes>
+      <class name="com.flight.booking.testrunner.FlightDetailsTestRunner" />
+    </classes>
+  </test>
+  <test name="BookVerification3">
+    <classes>
+      <class name="com.flight.booking.testrunner.FlightSelectionTestRunner" />
+    </classes>
+  </test>
+  <test name="BookVerification4">
+    <classes>
+      <class name="com.flight.booking.testrunner.PriceConfirmationTestRunner" />
+    </classes>
+  </test>
+  <test name="BookVerification5">
+    <classes>
+      <class name="com.flight.booking.testrunner.RegistrationTestRunner" /> <!-- Test -->
+    </classes>
+  </test>
 </suite> <!-- Suite -->
