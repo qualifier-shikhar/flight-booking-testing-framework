@@ -2,30 +2,30 @@
 <testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-11-16T22:33:40 IST" name="Suite" finished-at="2021-11-16T22:35:06 IST" duration-ms="86353">
+  <suite started-at="2021-11-17T11:57:43 IST" name="Suite" finished-at="2021-11-17T11:59:00 IST" duration-ms="76480">
     <groups>
       <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.flight.booking.testrunner.BillingDetailsTestRunner@3c947bc5]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.flight.booking.testrunner.FlightDetailsTestRunner@29647f75]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.flight.booking.testrunner.FlightSelectionTestRunner@6a6afff2]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.flight.booking.testrunner.PriceConfirmationTestRunner@6a370f4]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.flight.booking.testrunner.RegistrationTestRunner@140c9f39]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.flight.booking.testrunner.BillingDetailsTestRunner@671a5887]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.flight.booking.testrunner.FlightDetailsTestRunner@2892dae4]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.flight.booking.testrunner.FlightSelectionTestRunner@482bce4f]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.flight.booking.testrunner.PriceConfirmationTestRunner@62e7f11d]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
+        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.flight.booking.testrunner.RegistrationTestRunner@19d481b]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2021-11-16T22:33:40 IST" name="BookVerification1" finished-at="2021-11-16T22:34:07 IST" duration-ms="27714">
+    <test started-at="2021-11-17T11:57:43 IST" name="BookVerification1" finished-at="2021-11-17T11:58:03 IST" duration-ms="19954">
       <class name="com.flight.booking.testrunner.BillingDetailsTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.flight.booking.testrunner.BillingDetailsTestRunner@3c947bc5]" started-at="2021-11-16T22:33:40 IST" name="setUpClass" finished-at="2021-11-16T22:33:40 IST" duration-ms="305" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.flight.booking.testrunner.BillingDetailsTestRunner@671a5887]" started-at="2021-11-17T11:57:43 IST" name="setUpClass" finished-at="2021-11-17T11:57:44 IST" duration-ms="311" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@1397b141]]>
+                <![CDATA[org.testng.TestRunner@3ad2883a]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.flight.booking.testrunner.BillingDetailsTestRunner@3c947bc5]" started-at="2021-11-16T22:33:40 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-11-16T22:34:07 IST" duration-ms="26980" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.flight.booking.testrunner.BillingDetailsTestRunner@671a5887]" started-at="2021-11-17T11:57:44 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-11-17T11:58:03 IST" duration-ms="19199" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -41,26 +41,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.flight.booking.testrunner.BillingDetailsTestRunner@3c947bc5]" started-at="2021-11-16T22:34:07 IST" name="tearDownClass" finished-at="2021-11-16T22:34:07 IST" duration-ms="390" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.flight.booking.testrunner.BillingDetailsTestRunner@671a5887]" started-at="2021-11-17T11:58:03 IST" name="tearDownClass" finished-at="2021-11-17T11:58:03 IST" duration-ms="408" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
       </class> <!-- com.flight.booking.testrunner.BillingDetailsTestRunner -->
     </test> <!-- BookVerification1 -->
-    <test started-at="2021-11-16T22:34:07 IST" name="BookVerification2" finished-at="2021-11-16T22:34:21 IST" duration-ms="13122">
+    <test started-at="2021-11-17T11:58:03 IST" name="BookVerification2" finished-at="2021-11-17T11:58:15 IST" duration-ms="12026">
       <class name="com.flight.booking.testrunner.FlightDetailsTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.flight.booking.testrunner.FlightDetailsTestRunner@29647f75]" started-at="2021-11-16T22:34:07 IST" name="setUpClass" finished-at="2021-11-16T22:34:07 IST" duration-ms="14" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.flight.booking.testrunner.FlightDetailsTestRunner@2892dae4]" started-at="2021-11-17T11:58:03 IST" name="setUpClass" finished-at="2021-11-17T11:58:03 IST" duration-ms="16" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@579dde54]]>
+                <![CDATA[org.testng.TestRunner@5814b4fb]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.flight.booking.testrunner.FlightDetailsTestRunner@29647f75]" started-at="2021-11-16T22:34:07 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-11-16T22:34:21 IST" duration-ms="13102" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.flight.booking.testrunner.FlightDetailsTestRunner@2892dae4]" started-at="2021-11-17T11:58:03 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-11-17T11:58:15 IST" duration-ms="12006" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -76,26 +76,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.flight.booking.testrunner.FlightDetailsTestRunner@29647f75]" started-at="2021-11-16T22:34:21 IST" name="tearDownClass" finished-at="2021-11-16T22:34:21 IST" duration-ms="5" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.flight.booking.testrunner.FlightDetailsTestRunner@2892dae4]" started-at="2021-11-17T11:58:15 IST" name="tearDownClass" finished-at="2021-11-17T11:58:15 IST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
       </class> <!-- com.flight.booking.testrunner.FlightDetailsTestRunner -->
     </test> <!-- BookVerification2 -->
-    <test started-at="2021-11-16T22:34:21 IST" name="BookVerification3" finished-at="2021-11-16T22:34:34 IST" duration-ms="12959">
+    <test started-at="2021-11-17T11:58:15 IST" name="BookVerification3" finished-at="2021-11-17T11:58:28 IST" duration-ms="12300">
       <class name="com.flight.booking.testrunner.FlightSelectionTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.flight.booking.testrunner.FlightSelectionTestRunner@6a6afff2]" started-at="2021-11-16T22:34:21 IST" name="setUpClass" finished-at="2021-11-16T22:34:21 IST" duration-ms="61" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.flight.booking.testrunner.FlightSelectionTestRunner@482bce4f]" started-at="2021-11-17T11:58:15 IST" name="setUpClass" finished-at="2021-11-17T11:58:15 IST" duration-ms="31" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@30b9728f]]>
+                <![CDATA[org.testng.TestRunner@3aca2579]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.flight.booking.testrunner.FlightSelectionTestRunner@6a6afff2]" started-at="2021-11-16T22:34:21 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-11-16T22:34:34 IST" duration-ms="12890" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.flight.booking.testrunner.FlightSelectionTestRunner@482bce4f]" started-at="2021-11-17T11:58:15 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-11-17T11:58:28 IST" duration-ms="12262" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -111,26 +111,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.flight.booking.testrunner.FlightSelectionTestRunner@6a6afff2]" started-at="2021-11-16T22:34:34 IST" name="tearDownClass" finished-at="2021-11-16T22:34:34 IST" duration-ms="7" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.flight.booking.testrunner.FlightSelectionTestRunner@482bce4f]" started-at="2021-11-17T11:58:28 IST" name="tearDownClass" finished-at="2021-11-17T11:58:28 IST" duration-ms="5" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
       </class> <!-- com.flight.booking.testrunner.FlightSelectionTestRunner -->
     </test> <!-- BookVerification3 -->
-    <test started-at="2021-11-16T22:34:34 IST" name="BookVerification4" finished-at="2021-11-16T22:34:53 IST" duration-ms="19822">
+    <test started-at="2021-11-17T11:58:28 IST" name="BookVerification4" finished-at="2021-11-17T11:58:45 IST" duration-ms="17378">
       <class name="com.flight.booking.testrunner.PriceConfirmationTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.flight.booking.testrunner.PriceConfirmationTestRunner@6a370f4]" started-at="2021-11-16T22:34:34 IST" name="setUpClass" finished-at="2021-11-16T22:34:34 IST" duration-ms="18" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.flight.booking.testrunner.PriceConfirmationTestRunner@62e7f11d]" started-at="2021-11-17T11:58:28 IST" name="setUpClass" finished-at="2021-11-17T11:58:28 IST" duration-ms="25" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@6b899971]]>
+                <![CDATA[org.testng.TestRunner@4ba13fed]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.flight.booking.testrunner.PriceConfirmationTestRunner@6a370f4]" started-at="2021-11-16T22:34:34 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-11-16T22:34:53 IST" duration-ms="19795" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.flight.booking.testrunner.PriceConfirmationTestRunner@62e7f11d]" started-at="2021-11-17T11:58:28 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-11-17T11:58:45 IST" duration-ms="17346" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -146,26 +146,26 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.flight.booking.testrunner.PriceConfirmationTestRunner@6a370f4]" started-at="2021-11-16T22:34:53 IST" name="tearDownClass" finished-at="2021-11-16T22:34:53 IST" duration-ms="7" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.flight.booking.testrunner.PriceConfirmationTestRunner@62e7f11d]" started-at="2021-11-17T11:58:45 IST" name="tearDownClass" finished-at="2021-11-17T11:58:45 IST" duration-ms="4" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
       </class> <!-- com.flight.booking.testrunner.PriceConfirmationTestRunner -->
     </test> <!-- BookVerification4 -->
-    <test started-at="2021-11-16T22:34:53 IST" name="BookVerification5" finished-at="2021-11-16T22:35:06 IST" duration-ms="12570">
+    <test started-at="2021-11-17T11:58:45 IST" name="BookVerification5" finished-at="2021-11-17T11:59:00 IST" duration-ms="14624">
       <class name="com.flight.booking.testrunner.RegistrationTestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.flight.booking.testrunner.RegistrationTestRunner@140c9f39]" started-at="2021-11-16T22:34:53 IST" name="setUpClass" finished-at="2021-11-16T22:34:54 IST" duration-ms="27" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.flight.booking.testrunner.RegistrationTestRunner@19d481b]" started-at="2021-11-17T11:58:45 IST" name="setUpClass" finished-at="2021-11-17T11:58:45 IST" duration-ms="34" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@453a30f8]]>
+                <![CDATA[org.testng.TestRunner@651cedfb]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.flight.booking.testrunner.RegistrationTestRunner@140c9f39]" started-at="2021-11-16T22:34:54 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-11-16T22:35:06 IST" duration-ms="12531" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.flight.booking.testrunner.RegistrationTestRunner@19d481b]" started-at="2021-11-17T11:58:45 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2021-11-17T11:59:00 IST" duration-ms="14579" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -181,7 +181,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.flight.booking.testrunner.RegistrationTestRunner@140c9f39]" started-at="2021-11-16T22:35:06 IST" name="tearDownClass" finished-at="2021-11-16T22:35:06 IST" duration-ms="10" status="PASS">
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.flight.booking.testrunner.RegistrationTestRunner@19d481b]" started-at="2021-11-17T11:59:00 IST" name="tearDownClass" finished-at="2021-11-17T11:59:00 IST" duration-ms="9" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
