@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.min.js"></script>
+<script src="js/Chart.min.js"></script>
+<script src="js/moment.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="css/bootstrap.min.css" type="text/css"/>
+<link rel="stylesheet" href="css/cucumber.css" type="text/css"/>
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+<link rel="shortcut icon" href="images/favicon.png"/>
+
+<script>
+$(document).ready(function() {
+    // this will tell tablesorter to try looking for the data-value attribute
+    // if present, it'll sort by that instead
+    // otherwise, it'll sort by the text content of the table cell
+    $("#tablesorter").tablesorter({
+        textAttribute: 'data-value',
+        // ignores the first row of the header, the 'scenario', 'steps', since
+        // sorting those doesn't make sense
+        selectorHeaders: '> thead tr:not(.dont-sort) th',
+        // use a stable sort
+        sortStable: true
+    });
+});
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<title>Cucumber Reports (no 1) - Steps Overview</title>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navigation">
+  <div class="container-fluid">
+    <div class="collapse navbar-collapse">
+      <p class="navbar-text navbar-left">Cucumber Report</p>
+      <ul class="nav navbar-nav navbar-right">
+        <li role="presentation" ><a href="overview-features.html">Features</a></li>
+        <li role="presentation" ><a href="overview-tags.html">Tags</a></li>
+        <li role="presentation"     class="active" ><a href="overview-steps.html">Steps</a></li>
+        <li role="presentation" ><a href="overview-failures.html">Failures</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<div class="container-fluid">
+  <div class="col-md-5 col-md-offset-1">
+
+<table class="table table-bordered" id="build-info">
+  <thead>
+    <tr>
+      <th>Project</th>
+        <th>Number</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="info">
+      <td>Flight Booking Testing Framework</td>
+        <td>1</td>
+      <td>16 Nov 2021, 22:35</td>
+    </tr>
+  </tbody>
+</table>
+
+  </div>
+  <div class="col-md-3 col-md-offset-2">
+  </div>
+</div>
+
+
+<div id="report-lead" class="container-fluid">
+  <div class="col-md-10 col-md-offset-1">
+    <h2>Steps Statistics</h2>
+      <p>The following graph shows step statistics for this build. Below list is based on results.
+ step does not provide information about result then is not listed below.
+ Additionally @Before and @After are not counted because they are part of the scenarios, not steps.</p>
+  </div>
+</div>
+
+<div class="container-fluid" id="report">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <table id="tablesorter" class="stats-table table-hover">
+
+        <thead>
+          <tr class="header">
+            <th>Implementation</th>
+            <th>Occurrences</th>
+            <th>Average duration</th>
+            <th>Max duration</th>
+            <th>Total durations</th>
+            <th>Ratio</th>
+          </tr>
+        </thead>
+
+        <tbody>
+            <tr>
+              <td class="location">com.flight.booking.stepdef.BillingDetailsStep.user_enter_billing_details()</td>
+              <td>2</td>
+              <td class="duration" data-value="352604750">0.352</td>
+              <td class="duration" data-value="352604750">0.367</td>
+              <td class="duration" data-value="705209500">0.705</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.flight.booking.stepdef.BillingDetailsStep.user_hit_continue_button()</td>
+              <td>2</td>
+              <td class="duration" data-value="66958300">0.066</td>
+              <td class="duration" data-value="66958300">0.067</td>
+              <td class="duration" data-value="133916600">0.133</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.flight.booking.stepdef.FlightDetailsStep.user_clicks_continue_button()</td>
+              <td>4</td>
+              <td class="duration" data-value="82500150">0.082</td>
+              <td class="duration" data-value="82500150">0.123</td>
+              <td class="duration" data-value="330000600">0.330</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.flight.booking.stepdef.FlightDetailsStep.user_filled_up_flight_details()</td>
+              <td>4</td>
+              <td class="duration" data-value="1342201950">1.342</td>
+              <td class="duration" data-value="1342201950">1.665</td>
+              <td class="duration" data-value="5368807800">5.368</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.flight.booking.stepdef.FlightDetailsStep.user_is_on_the_flight_details_webpage()</td>
+              <td>4</td>
+              <td class="duration" data-value="1215453550">1.215</td>
+              <td class="duration" data-value="1215453550">1.275</td>
+              <td class="duration" data-value="4861814200">4.861</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.flight.booking.stepdef.FlightSelectionStep.user_select_continue_button()</td>
+              <td>3</td>
+              <td class="duration" data-value="69532133">0.069</td>
+              <td class="duration" data-value="69532133">0.080</td>
+              <td class="duration" data-value="208596400">0.208</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.flight.booking.stepdef.FlightSelectionStep.user_selects_departure_and_return_flight()</td>
+              <td>3</td>
+              <td class="duration" data-value="152731166">0.152</td>
+              <td class="duration" data-value="152731166">0.156</td>
+              <td class="duration" data-value="458193500">0.458</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.flight.booking.stepdef.PriceConfirmationStep.user_get_ticket_price()</td>
+              <td>1</td>
+              <td class="duration" data-value="31385200">0.031</td>
+              <td class="duration" data-value="31385200">0.031</td>
+              <td class="duration" data-value="31385200">0.031</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.flight.booking.stepdef.PriceConfirmationStep.user_goes_to_ticket_price_page()</td>
+              <td>1</td>
+              <td class="duration" data-value="80481400">0.080</td>
+              <td class="duration" data-value="80481400">0.080</td>
+              <td class="duration" data-value="80481400">0.080</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.flight.booking.stepdef.RegistrationPageStep.user_filled_up_registration_details_and_hit_submit()</td>
+              <td>5</td>
+              <td class="duration" data-value="1074604160">1.074</td>
+              <td class="duration" data-value="1074604160">1.326</td>
+              <td class="duration" data-value="5373020800">5.373</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.flight.booking.stepdef.RegistrationPageStep.user_gets_flights_link_to_get_to_flight_details_page()</td>
+              <td>5</td>
+              <td class="duration" data-value="121468660">0.121</td>
+              <td class="duration" data-value="121468660">0.145</td>
+              <td class="duration" data-value="607343300">0.607</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.flight.booking.stepdef.RegistrationPageStep.user_gets_registration_confirmation_page()</td>
+              <td>5</td>
+              <td class="duration" data-value="90960200">0.090</td>
+              <td class="duration" data-value="90960200">0.106</td>
+              <td class="duration" data-value="454801000">0.454</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.flight.booking.stepdef.RegistrationPageStep.user_is_on_the_registration_webpage()</td>
+              <td>5</td>
+              <td class="duration" data-value="125651440">0.125</td>
+              <td class="duration" data-value="125651440">0.170</td>
+              <td class="duration" data-value="628257200">0.628</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.flight.booking.stepdef.TestInitialize.setUp()</td>
+              <td>5</td>
+              <td class="duration" data-value="11316993680">11.316</td>
+              <td class="duration" data-value="11316993680">17.906</td>
+              <td class="duration" data-value="56584968400">56.584</td>
+              <td class="passed">100.00%</td>
+            </tr>
+            <tr>
+              <td class="location">com.flight.booking.stepdef.TestInitialize.tearDown()</td>
+              <td>5</td>
+              <td class="duration" data-value="1864214780">1.864</td>
+              <td class="duration" data-value="1864214780">4.214</td>
+              <td class="duration" data-value="9321073900">9.321</td>
+              <td class="passed">100.00%</td>
+            </tr>
+        </tbody>
+
+        <tfoot class="total">
+          <tr>
+            <td>15</td>
+            <td>54</td>
+            <td class="duration">1.576</td>
+            <td class="duration">56.584</td>
+            <td class="duration">1:25.147</td>
+            <td>Totals</td>
+          </tr>
+        </tfoot>
+
+      </table>
+    </div>
+  </div>
+</div>
+
+
+<nav class="navbar navbar-default" id="footer">
+  <div class="container-fluid">
+    <p class="navbar-text navbar-right">
+        <small>generate Cucumber HTML reports via:&nbsp;</small>
+        <a class="navbar-link" href="https://github.com/jenkinsci/cucumber-reports-plugin">Jenkins Plugin</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-reporting">Standalone</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/cucumber-sandwich">Sandwich</a> |
+        <a class="navbar-link" href="https://github.com/damianszczepanik/maven-cucumber-reporting">Maven</a>
+        &nbsp;&nbsp;
+    </p>
+  </div>
+</nav>
+
+</body>
+</html>

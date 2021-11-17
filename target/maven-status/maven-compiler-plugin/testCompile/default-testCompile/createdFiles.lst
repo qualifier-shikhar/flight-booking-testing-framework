@@ -1,0 +1,12 @@
+com\flight\booking\stepdef\FlightDetailsStep.class
+com\flight\booking\testrunner\BillingDetailsTestRunner.class
+com\flight\booking\stepdef\PriceConfirmationStep.class
+com\flight\booking\testrunner\FlightSelectionTestRunner.class
+com\flight\booking\stepdef\FlightSelectionStep.class
+com\flight\booking\stepdef\RegistrationPageStep.class
+com\flight\booking\seleniumtest\AppTest.class
+com\flight\booking\stepdef\BillingDetailsStep.class
+com\flight\booking\stepdef\TestInitialize.class
+com\flight\booking\testrunner\FlightDetailsTestRunner.class
+com\flight\booking\testrunner\PriceConfirmationTestRunner.class
+com\flight\booking\testrunner\RegistrationTestRunner.class
