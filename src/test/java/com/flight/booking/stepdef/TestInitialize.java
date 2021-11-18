@@ -18,9 +18,6 @@ public class TestInitialize extends FrameworkInitialize{
     @Before
     public void setUp() throws IOException {
         
-        // CurrentPage = GetInstance(BillingDetailsPage.class);
-        // CurrentPage.As(BillingDetailsPage.class).billingAddress("10 Dowing Street", "Test Pur", "Dakota", "23546798");
-
         InitializeBrowser("chrome");
         GoToUrl();
         LOGGER.info("Initializing Driver");

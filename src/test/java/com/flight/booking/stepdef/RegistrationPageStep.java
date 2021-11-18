@@ -23,7 +23,7 @@ public class RegistrationPageStep extends Base{
     public void user_filled_up_registration_details_and_hit_submit() throws Throwable {
 
         LOGGER.info("User is filling Registration Details");
-        CurrentPage.As(RegistrationPage.class).register("test", "testLast", "9867653498", "test123", "test123@gmail.com", "pass", "pass");
+        CurrentPage.As(RegistrationPage.class).register("test", "testLast", "9867653498", "test123@gmail.com", "INDIA","test123", "pass", "pass");
     }
 
     @Then("^user gets registration confirmation page$")

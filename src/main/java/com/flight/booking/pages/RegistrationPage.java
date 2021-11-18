@@ -51,14 +51,14 @@ public class RegistrationPage extends BasePage{
         return firstname.isDisplayed();
     }
 
-    public void register(String firstName, String lastName, String phoneNumber, String userName, String e_mail, String pass_word, String password_Confirm) {
+    public void register(String firstName, String lastName, String phoneNumber, String e_mail, String country, String userName, String pass_word, String password_Confirm) {
         
         Select select = new Select(selectCountry);
         firstname.sendKeys(firstName);
         lastname.sendKeys(lastName);
         phone.sendKeys(phoneNumber);
         username.sendKeys(userName);
-        select.selectByValue("INDIA");
+        select.selectByValue(country.toUpperCase());
         email.sendKeys(e_mail);
         password.sendKeys(pass_word);
         passwordConfirm.sendKeys(password_Confirm);
